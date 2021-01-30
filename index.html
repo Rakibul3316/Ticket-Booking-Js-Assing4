@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Header and Menu Section-->
+    <header class="container">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a class="active" href="#">Sign Up</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--Booking Section-->
+    <main class="main-content container">
+        <div class="booking-form">
+            <h3>Booking Flights</h3>
+            <div class="input-group">
+                <label for="">Flying From</label>
+                <input class="inp-style" type="text" name="" placeholder="Dhake, Bangladesh">
+            </div>
+            <div class="input-group">
+                <label for="">Flying To</label>
+                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+            </div>
+            <div class="inputs">
+                <div class="input-group">
+                    <label" for="">Departure</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+                <div class="input-group">
+                    <label for="">Return</label>
+                    <input class="inp-style" type="date" name="">
+                </div>
+            </div>
+            <div class="input-group f-class">
+                <div>
+                    <label for="">First Class ($150)</label>
+                    <input class="inp-style inp-width" type="text" value="0" id="firstClassCount">
+                </div>
+                <div class="button-group">
+                    <button onclick="ticketCost(true, 'firstClass')">+</button>
+                    <button onclick="ticketCost(false, 'firstClass')">-</button>
+                </div>
+            </div>
+            
+            <div class="input-group f-class">
+                <div>
+                    <label for="">Economy ($100)</label>
+                    <input class="inp-style inp-width" type="text" value="0" id="economyCount">
+                </div>
+                <div class="button-group">
+                    <button onclick="ticketCost(true, 'economy')">+</button>
+                    <button onclick="ticketCost(false, 'economy')">-</button>
+                </div>
+            </div>
+            <div class="calculations">
+                <div class="amount">
+                    <div class="left">
+                        <p>Subtotal</p>
+                    </div>
+                    <div class="right">
+                        <p id="subTotal">$0</p>
+                    </div>
+                </div>
+
+                <div class="amount">
+                    <div class="left">
+                        <p>Charge 10% VAT</p>
+                    </div>
+                    <div class="right">
+                        <p id="taxCost">$0</p>
+                    </div>
+                </div>
+                <hr>
+                <div class="amount">
+                    <div class="left">
+                        <h4>Total</h4>
+                    </div>
+                    <div class="right">
+                        <p id="totalCost">$0</p>
+                    </div>
+                </div>
+            </div>
+            <button class="btn-style booking-btn">Book Now</button>
+        </div>
+
+        <div class="booking-content">
+            <h1>discover <br> around the world</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
+        </div>
+
+        <!-- Modal-Area -->
+        <div class="modal-bg">
+            <div class="modal">
+                <h2>Your Ticket Booking is Successfully.</h2>
+                <div class="calculations">
+                    <div class="amount">
+                        <div class="left">
+                            <p>First Class Tickets</p>
+                        </div>
+                        <div class="right">
+                            <p id="setFirstClass">0</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Economy Class Tickets</p>
+                        </div>
+                        <div class="right">
+                            <p id="setEconomyClass">0</p>
+                        </div>
+                    </div>
+                    <div class="amount">
+                        <div class="left">
+                            <p>Total Ticket Fear</p>
+                        </div>
+                        <div class="right">
+                            <p id="setTotal">$0</p>
+                        </div>
+                    </div>
+                </div>
+                <h4>Happy Journey !</h4>
+                <button class="modal-close">Close</button>
+            </div>
+        </div>
+    </main>
+
+    <!--Thank You-->
+    <script src="index.js"></script>
+</body>
+
+</html>
