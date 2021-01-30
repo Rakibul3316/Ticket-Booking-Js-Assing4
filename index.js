@@ -44,18 +44,11 @@ modalBtn.addEventListener("click", function () {
   modalBg.classList.add("modal-bg-active");
 
   // Get and set value for modal message
-  document.getElementById("setFromPlace").innerText = document.getElementById(
-    "fromPlace"
-  ).value;
-  document.getElementById("setToPlace").innerText = document.getElementById(
-    "toPlace"
-  ).value;
-  document.getElementById("setFirstClass").innerText = document.getElementById(
-    "firstClassCount"
-  ).value;
-  document.getElementById(
-    "setEconomyClass"
-  ).innerText = document.getElementById("economyCount").value;
+  setValueForInput("setFromPlace", "fromPlace");
+  setValueForInput("setToPlace", "toPlace");
+  setValueForInput("setFirstClass", "firstClassCount");
+  setValueForInput("setEconomyClass", "economyCount");
+
   document.getElementById("setTotal").innerText = document.getElementById(
     "totalCost"
   ).innerText;
@@ -64,3 +57,9 @@ modalBtn.addEventListener("click", function () {
 modalClose.addEventListener("click", function () {
   modalBg.classList.remove("modal-bg-active");
 });
+
+function setValueForInput(setId, getId) {
+  document.getElementById(setId).innerText = document.getElementById(
+    getId
+  ).value;
+}
