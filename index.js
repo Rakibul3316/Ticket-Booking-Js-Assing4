@@ -44,7 +44,12 @@ modalBtn.addEventListener("click", function () {
   modalBg.classList.add("modal-bg-active");
 
   // Get and set value for modal message
-
+  document.getElementById("setFromPlace").innerText = document.getElementById(
+    "fromPlace"
+  ).value;
+  document.getElementById("setToPlace").innerText = document.getElementById(
+    "toPlace"
+  ).value;
   document.getElementById("setFirstClass").innerText = document.getElementById(
     "firstClassCount"
   ).value;
